@@ -18,7 +18,7 @@ public class AlertDemo_Q3 {
 		String url = "http://automationbykrishna.com/#";
 		driver.get(url);
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@class='nav navbar-nav navbar-right']/preceding-sibling::ul/li[4]/a")).click();
+		driver.findElement(By.xpath("//ul[@class='nav navbar-nav navbar-right']/preceding-sibling::ul/li[4]/a")).click();
 		Thread.sleep(2000);
 		AlertDemo_Q3 alertDemo_Q3 = new AlertDemo_Q3();
 		alertDemo_Q3.javascriptConfirmation(driver);
@@ -46,7 +46,7 @@ public class AlertDemo_Q3 {
 		Thread.sleep(2000);
 		Alert alert2 = driver.switchTo().alert();
 		alert2.dismiss();
-		WebElement label2 = driver.findElement(By.xpath("//*[text()=' Form Elements ']/ancestor::div[2]/preceding-sibling::div[3]/descendant::div[2]/following::P"));
+		WebElement label2 = driver.findElement(By.xpath("//header[text()=' Form Elements ']/ancestor::div[2]/preceding-sibling::div[3]/descendant::div[2]/following::P"));
 		String actualText2 = label2.getText();
 		String expectedText2 = "You pressed Cancel!";
 		if (expectedText2.equals(actualText2)) {

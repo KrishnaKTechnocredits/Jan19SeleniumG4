@@ -18,7 +18,7 @@ public class AlertDemo_Q4 {
 		String url = "http://automationbykrishna.com/#";
 		driver.get(url);
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//*[@class='nav navbar-nav navbar-right']/preceding-sibling::ul/li[4]/a")).click();
+		driver.findElement(By.xpath("//ul[@class='nav navbar-nav navbar-right']/preceding-sibling::ul/li[4]/a")).click();
 		Thread.sleep(2000);
 		AlertDemo_Q4 alertDemo_Q4 = new AlertDemo_Q4();
 		alertDemo_Q4.javaScriptPrompt(driver);

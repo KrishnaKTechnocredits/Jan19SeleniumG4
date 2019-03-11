@@ -17,16 +17,14 @@ public class TechnoLogin_Q5 {
 		driver.get(url);
 		driver.findElement(By.id("registration2")).click();
 		Thread.sleep(2000);
-		String uname = "jainprachi.cs@gmail.com";
-		String upassword = "@392xyz";
 		TechnoLogin_Q5 technoLogin = new TechnoLogin_Q5();
 
 		WebElement e1 = driver.findElement(By.id("unameSignin"));
-		e1.sendKeys(uname);
+		e1.sendKeys("jainprachi.cs@gmail.com");
 		String username = e1.getAttribute("value");
 
 		WebElement e2 = driver.findElement(By.id("pwdSignin"));
-		e2.sendKeys(upassword);
+		e2.sendKeys("@392xyz123");
 		String password = e2.getAttribute("value");
 
 		WebElement e3 = driver.findElement(By.id("btnsubmitdetails"));
