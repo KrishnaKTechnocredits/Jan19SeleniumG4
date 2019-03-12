@@ -2,6 +2,7 @@ package seleniumPractise.pallavi;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -17,6 +18,9 @@ public class JavaScript_Confirmation
 		driver.manage().window().maximize();
 		driver.findElement(By.linkText("Basic Elements")).click();
 		Thread.sleep(1000);
+		WebElement ele = driver.findElement(By.xpath(".//header[text()=' Different Examples of Alerts ']"));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true)", ele);
 		String acceptMessage = "You pressed OK!";
 		String dismissMessage = "You pressed Cancel!";
 		WebElement element = driver.findElement(By.xpath(".//button[text()='Javascript Confirmation']"));

@@ -25,7 +25,7 @@ public class Login_Password_Validation
 			String password = "ab@123";
 			driver.findElement(By.xpath(".//input[@id='pwdSignin' and @class='form-control']")).sendKeys(password);
 			driver.findElement(By.xpath(".//button[@id='btnsubmitdetails']")).click();
-			if (password.length() >= 5 && password.length() <= 8) 
+			if (password.length()<9) 
 			{
 				Alert al = driver.switchTo().alert();
 				Thread.sleep(1000);

@@ -176,8 +176,6 @@ public class Registration_Validation
 		ele.click();
 
 		Alert alt = driver.switchTo().alert();
-		Alert alt1 = driver.switchTo().alert();
-		Alert alt2 = driver.switchTo().alert();
 
 		if (alt.getText().equals("Please use correct email format")) 
 		{
@@ -185,9 +183,9 @@ public class Registration_Validation
 			Thread.sleep(2000);
 			alt.accept();
 		} 
-		else if (alt1.getText().equals("Please use correct email format")) 
+		else if (alt.getText().equals("Please use correct email format")) 
 		{
-			System.out.println("Failure message is: " + alt1.getText());
+			System.out.println("Failure message is: " + alt.getText());
 			Thread.sleep(2000);
 			alt.accept();
 		} 
