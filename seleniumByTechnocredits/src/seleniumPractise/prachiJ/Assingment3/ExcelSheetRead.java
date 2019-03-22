@@ -23,12 +23,10 @@ public class ExcelSheetRead {
 	Object[][] getRowData(String sheetName) throws IOException {
 		int FirstRow = workbook.getSheet(sheetName).getFirstRowNum();
 		int FirstCol = workbook.getSheet(sheetName).getRow(0).getFirstCellNum();
-		int rows = workbook.getSheet(sheetName).getLastRowNum(); // 12 -
-																	// excluding
-																	// header
-		int cols = workbook.getSheet(sheetName).getRow(0).getLastCellNum(); // 10
-		Object[][] cellData = new String[rows][cols]; // 0 to 11 ka array for
-														// rows
+		int rows = workbook.getSheet(sheetName).getLastRowNum(); 																												
+		int cols = workbook.getSheet(sheetName).getRow(0).getLastCellNum(); 
+		Object[][] cellData = new String[rows][cols]; 
+														
 		boolean isHeader = true;
 		if (isHeader) {
 			FirstRow++;
