@@ -82,6 +82,7 @@ public class Homework6 {
 
 		scroll();
 		ele.click();
+		
 		validateAlertMessage();
 		}
 
